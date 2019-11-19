@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { StyledNavbar, StyledLogo, StyledMenu, StyledMobile, StyledMenuMobile } from "./styled";
+import React, { useState, useLayoutEffect } from "react";
+import { StyledNavbar, StyledLogo, StyledMenu, StyledMobile, StyledMenuMobile, Mobile } from "./styled";
 import DefaultText from "../shared/text";
-const Navbar = () => {
+const Navbar = ({scroll}) => {
   const data = ["Home", "Sobre", "Exemplos", "Contato"];
   const [selected, setSelected] = useState("Home");
+
   return (
-    <StyledNavbar>
-      <StyledLogo />
+    <StyledNavbar scroll={scroll > 180}>
+      <StyledLogo scroll={scroll > 180}>
+        <img src={require("../../assets/img/logo.svg")} />
+      </StyledLogo>
+      <Mobile/>
       <StyledMenu>
         {data.map(i => (
           <DefaultText
@@ -19,9 +23,9 @@ const Navbar = () => {
         ))}
       </StyledMenu>
       <StyledMobile>
-          <StyledMenuMobile>
-            <img src={require('../../assets/img/menu.svg')} /> 
-          </StyledMenuMobile>
+        <StyledMenuMobile>
+          <img src={require("../../assets/img/menu.svg")} />
+        </StyledMenuMobile>
       </StyledMobile>
     </StyledNavbar>
   );

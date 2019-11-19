@@ -14,6 +14,9 @@ export const StyledCart = styled.div`
   height: 100vh;
   position: fixed;
   overflow: auto;
+  @media(max-width: 768px) {
+    width: 60%;
+  }
 `;
 export const Card = styled.div`
   width: 90%;

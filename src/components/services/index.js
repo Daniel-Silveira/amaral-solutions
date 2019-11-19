@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { StyledServices, StyledBox, StyledImage, StyledText } from "./styled";
 import DefaultText from "../shared/text";
-const Services = () => {
+const Services = ({ scroll }) => {
   const data = [
     {
       url: require("../../assets/img/code.svg"),

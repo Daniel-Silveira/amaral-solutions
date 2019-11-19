@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import DefaultText from "../shared/text";
 
 export const StyledServices = styled.div`

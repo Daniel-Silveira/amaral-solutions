@@ -15,6 +15,9 @@ export const Product = styled.div`
   margin: 3%;
   border-radius: 7px;
   box-shadow: 0 0 3px rgba(0,0,0,.2);
+  @media(max-width: 768px) {
+    width: 85%;
+  }
 
   button {
     padding: 7%;
