@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from '../shared/button';
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -8,6 +9,7 @@ export const StyledHeader = styled.div`
   @media (max-width: 768px) {
     height: inherit;
     flex-wrap: wrap;
+    
   }
 `;
 export const StyledImage = styled.div`
@@ -29,6 +31,20 @@ export const StyledText = styled.div`
     text-align: center;
     padding-left: 0;
     align-items: center;
+    padding-top: 7%;
     position: absolute;
   }
 `;
+
+export const StyledButton = styled(Button)`
+
+ width: 15vw;
+ height: 9vh;
+ @media (max-width: 768px) {
+   width:65vw;   
+ }
+
+  
+
+
+`

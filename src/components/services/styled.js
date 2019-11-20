@@ -22,7 +22,7 @@ export const StyledBox = styled.div`
   width: 25%;
   @media (max-width: 768px) {
     width: 80%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
   }
   p {
     height: 4em;
