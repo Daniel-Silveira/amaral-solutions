@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledContact, StyledForm, StyledGroup, GroupButton } from "./styled";
 import Input from "../shared/input";
 import Button from "../shared/button";
 import { StyledTitle } from "../about/styled";
 import { Element } from "react-scroll";
+import { sendEmail } from "../../utils";
 
 const Contact = () => {
   const schema = {
@@ -15,15 +16,21 @@ const Contact = () => {
   };
   const [info, setInfo] = useState(schema);
   const [error, setError] = useState(false);
+  const [response, setResponse] = useState("Enviar");
   const verification = () => {
     const send = () => {
-      setInfo(schema);
-      setError(false);
-      alert("Enviado");
-      console.log(info);
+      setResponse("Enviando...");
+      sendEmail(info, setResponse);
     };
     info.name && info.email && info.phone ? send() : setError(true);
   };
+  useEffect(() => {
+    if (response === "Enviado") {
+      setInfo(schema);
+      setError(false);
+      setResponse(response);
+    } else setResponse(response);
+  }, [response]);
   return (
     <div style={{ marginTop: "10%" }}>
       <Element name='Contato'>
@@ -65,7 +72,7 @@ const Contact = () => {
               onChange={e => setInfo({ ...info, description: e.target.value })}
             />
             <GroupButton>
-              <Button text='Enviar' onClick={verification} />
+              <Button text={response} onClick={verification} />
             </GroupButton>
           </StyledForm>
         </StyledContact>

@@ -10,3 +10,18 @@ export const getModelo = (list, setList, id) => {
     .then(res => setList({ ...list, modelo: res }))
     .catch(err => console.log(err));
 };
+export const sendEmail = (data, setSend) => {
+  fetch("http://localhost:8081/api/v1/data", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+    .then(res => {
+      console.log(res);
+      return setSend('Enviado');
+    })
+    .catch(err => {
+      console.log(err);
+      return setSend('Não enviado');
+    });
+};
