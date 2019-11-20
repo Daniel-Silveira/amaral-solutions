@@ -9,7 +9,7 @@ const Header = () => {
       <StyledHeader>
         <StyledText>
           <DefaultText
-            text='“A TECNOLOGIA POSSIBILITA QUE AS PESSOAS TENHAM CONTROLE SOBRE TUDO, EXCETO SOBRE A TECNOLOGIA ."'
+            text='“A Tecnologia Possibilita Que As Pessoas Tenham Controle Sobre Tudo, Exeto Sobre a Tecnologia ."'
             type='title'
           />
           <Link style={{zIndex:'999'}} activeClass='active' to='Contato' spy={true} smooth={true} duration={1000}>

@@ -9,6 +9,7 @@ export const StyledHeader = styled.div`
   @media (max-width: 768px) {
     height: inherit;
     flex-wrap: wrap;
+    
   }
 `;
 export const StyledImage = styled.div`
@@ -30,6 +31,7 @@ export const StyledText = styled.div`
     text-align: center;
     padding-left: 0;
     align-items: center;
+    padding-top: 7%;
     position: absolute;
   }
 `;

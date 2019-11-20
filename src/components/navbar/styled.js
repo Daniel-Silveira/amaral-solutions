@@ -75,7 +75,7 @@ export const StyledMenuMobile = styled.div`
 
 export const Toogle = styled.div`
   z-index: 9999;
-  transition: 1s;
+  transition: .3s;
   left: -60%;
   position: fixed;
   width: 60%;
