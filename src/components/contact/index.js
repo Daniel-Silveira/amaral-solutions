@@ -22,7 +22,7 @@ const Contact = () => {
       alert("Enviado");
       console.log(info);
     };
-    info.name && info.email && info.phone ? send() : setError(true);
+    info.name && info.email ? send() : setError(true);
   };
   return (
     <div style={{ marginTop: "10%" }}>
@@ -38,6 +38,7 @@ const Contact = () => {
             />
             <Input
               placeholder={error ? "Campo de E-mail obrigatório" : "E-mail *"}
+              keyboardType={'email'}
               value={info.email}
               onChange={e => setInfo({ ...info, email: e.target.value })}
               error={error && !info.email}
@@ -45,10 +46,11 @@ const Contact = () => {
             />
             <StyledGroup>
               <Input
-                placeholder={error ? "Campo de Telefone obrigatório" : "Telefone *"}
+                placeholder="Telefone"
+                keyboardType={'numeric'}
                 value={info.phone}
                 onChange={e => setInfo({ ...info, phone: e.target.value })}
-                error={error && !info.phone}
+                // error={error && !info.phone}
                 type='tel'
               />
               <Input
@@ -59,7 +61,7 @@ const Contact = () => {
               />
             </StyledGroup>
             <Input
-              type='textArea'
+              textArea
               placeholder='Descrição'
               value={info.description}
               onChange={e => setInfo({ ...info, description: e.target.value })}

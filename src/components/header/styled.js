@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from '../shared/button';
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -32,3 +33,16 @@ export const StyledText = styled.div`
     position: absolute;
   }
 `;
+
+export const StyledButton = styled(Button)`
+
+ width: 15vw;
+ height: 9vh;
+ @media (max-width: 768px) {
+   width:65vw;   
+ }
+
+  
+
+
+`

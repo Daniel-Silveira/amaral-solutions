@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 3.75em;
+  font-size: 3em;
   font-weight: 100;
   ${({ color }) =>
     color &&
@@ -47,5 +47,11 @@ export const Default = styled.p`
     color &&
     css`
       color: ${color};
+    `}
+
+    ${( {button }) =>
+    button && 
+    css`
+      font-size:1.5em;
     `}
 `;

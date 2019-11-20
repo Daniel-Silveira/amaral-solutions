@@ -8,6 +8,10 @@ export const StyledInput = styled.input`
   box-sizing: border-box;
   color: #00ffd1;
   background: transparent;
+  &::-webkit-outer-spin-button{
+    appearance: none;
+
+  }
   &::placeholder {
     color: #00ffd1;
     font-family: "Roboto", sans-serif;
