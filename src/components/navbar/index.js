@@ -1,32 +1,70 @@
 import React, { useState, useLayoutEffect } from "react";
-import { StyledNavbar, StyledLogo, StyledMenu, StyledMobile, StyledMenuMobile, Mobile } from "./styled";
+import {
+  StyledNavbar,
+  StyledLogo,
+  StyledMenu,
+  StyledMobile,
+  StyledMenuMobile,
+  Mobile,
+  Toogle,
+  StyledLogoMobile,
+  StyledGroup
+} from "./styled";
+import { Link } from "react-scroll";
 import DefaultText from "../shared/text";
-const Navbar = ({scroll}) => {
-  const data = ["Home", "Sobre", "Exemplos", "Contato"];
+import Overlay from "../overlay";
+const Navbar = ({ scroll }) => {
+  const data = ["Home", "Serviços", "Sobre", "Contato"];
   const [selected, setSelected] = useState("Home");
+  const [open, setOpen] = useState(false);
 
   return (
-    <StyledNavbar scroll={scroll > 180}>
-      <StyledLogo scroll={scroll > 180}>
+    <StyledNavbar scroll={!open && scroll > 180}>
+      <StyledLogo scroll={!open && scroll > 180}>
         <img src={require("../../assets/img/logo.svg")} />
       </StyledLogo>
-      <Mobile/>
+      <Mobile />
       <StyledMenu>
         {data.map(i => (
-          <DefaultText
-            color={selected === i ? null : "#fff"}
-            onClick={() => setSelected(i)}
-            type='titleCard'
-            text={i}
-            pointer
-          />
+          <Link activeClass='active' to={i} spy={true} smooth={true} duration={1000}>
+            <DefaultText
+              color={selected === i ? null : "#fff"}
+              onClick={() => setSelected(i)}
+              type='titleCard'
+              text={i}
+              pointer
+            />
+          </Link>
         ))}
       </StyledMenu>
       <StyledMobile>
-        <StyledMenuMobile>
+        <StyledMenuMobile onClick={() => setOpen(true)}>
           <img src={require("../../assets/img/menu.svg")} />
         </StyledMenuMobile>
       </StyledMobile>
+      <Toogle open={open}>
+        <StyledLogoMobile>
+          <img src={require("../../assets/img/logo.svg")} />
+        </StyledLogoMobile>
+
+        <StyledGroup>
+          {data.map(i => (
+            <Link activeClass='active' to={i} spy={true} smooth={true} duration={1000}>
+              <DefaultText
+                color={selected === i ? null : "#fff"}
+                onClick={() => {
+                  setOpen(false);
+                  setSelected(i);
+                }}
+                type='titleCard'
+                text={i}
+                pointer
+              />
+            </Link>
+          ))}
+        </StyledGroup>
+      </Toogle>
+      <Overlay open={open} setOpen={setOpen} />
     </StyledNavbar>
   );
 };

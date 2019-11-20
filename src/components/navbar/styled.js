@@ -72,3 +72,35 @@ export const StyledMenuMobile = styled.div`
       width: 30%;
     `}
 `;
+
+export const Toogle = styled.div`
+  z-index: 9999;
+  transition: 1s;
+  left: -60%;
+  position: fixed;
+  width: 60%;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${({ open }) =>
+    open &&
+    css`
+      left: 0;
+    `}
+`;
+
+export const StyledGroup = styled.div`
+  border-top: 2px solid #00ffd1;
+  width: 100%;
+  text-align: center;
+  padding-top: 3%;
+`;
+
+export const StyledLogoMobile = styled.div`
+  width: 50%;
+  padding: 3.5% 0;
+`;

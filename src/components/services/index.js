@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { StyledServices, StyledBox, StyledImage, StyledText } from "./styled";
 import DefaultText from "../shared/text";
+import { Element } from "react-scroll";
+
 const Services = ({ scroll }) => {
   const data = [
     {
@@ -28,7 +30,7 @@ const Services = ({ scroll }) => {
     }
   ];
   return (
-    <div>
+    <Element name="Serviços">
       <StyledText type='subtitle' text='Trabalhamos com' center />
       <StyledServices>
         {data.map(i => (
@@ -41,7 +43,7 @@ const Services = ({ scroll }) => {
           </StyledBox>
         ))}
       </StyledServices>
-    </div>
+    </Element>
   );
 };
 

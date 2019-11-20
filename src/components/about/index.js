@@ -1,10 +1,11 @@
 import React from "react";
 import { StyledAbout, StyledImage, StyledText, StyledTitle } from "./styled";
 import DefaultText from "../shared/text";
+import { Element } from "react-scroll";
 
 const About = () => {
   return (
-    <div>
+    <Element name="Sobre">
       <StyledTitle type='subtitle' text='Um pouco sobre nós..' center />
 
       <StyledAbout>
@@ -22,7 +23,7 @@ Para isso contamos com uma equipe especializada no que faz e muito dedicada para
           />
         </StyledText>
       </StyledAbout>
-    </div>
+    </Element>
   );
 };
 

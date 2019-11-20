@@ -7,4 +7,5 @@ export const StyledOverlay = styled.div`
     bottom: 0;
     right: 0;
     position: absolute;
+    height: 100vh;
 `
