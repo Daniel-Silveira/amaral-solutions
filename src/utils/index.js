@@ -11,14 +11,14 @@ export const getModelo = (list, setList, id) => {
     .catch(err => console.log(err));
 };
 export const sendEmail = (data, setSend) => {
-  fetch("http://localhost:8081/api/v1/data", {
+  fetch("https://api-amaral-solutions.herokuapp.com/api/v1/data", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   })
     .then(res => {
       console.log(res);
-      return setSend('Enviado');
+      return setSend('Enviado com sucesso');
     })
     .catch(err => {
       console.log(err);

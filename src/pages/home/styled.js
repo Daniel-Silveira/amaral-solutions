@@ -13,21 +13,4 @@ export const StyledHome = styled.div`
     font-family: "Baloo Bhai", cursive;
     margin: 0;
   }
-
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    background-color: #000;
-  }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    background-color: #000;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #00ffd1;
-  }
 `;
