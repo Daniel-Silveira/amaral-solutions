@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledAbout, StyledImage, StyledText, StyledTitle } from "./styled";
+import { StyledAbout, StyledImage, StyledText, StyledTitle, StyledAvatarOne } from "./styled";
 import DefaultText from "../shared/text";
 import { Element } from "react-scroll";
 
@@ -12,6 +12,7 @@ const About = () => {
         <StyledImage>
           <img src={require("../../assets/img/sobre.svg")} />
         </StyledImage>
+
         <StyledText>
           <DefaultText
             type="titleCard"
@@ -25,7 +26,12 @@ const About = () => {
 Para isso contamos com uma equipe especializada no que faz e muito dedicada para sempre dar o seu melhor resultado."
           />
         </StyledText>
+        <StyledAvatarOne>
+          <img src={require("../../assets/img/android1.svg")} />
+
+        </StyledAvatarOne>
       </StyledAbout>
+
     </Element>
   );
 };

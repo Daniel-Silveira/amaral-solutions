@@ -33,3 +33,16 @@ export const StyledTitle = styled(DefaultText)`
   padding: 3% 0;
   letter-spacing: 4px;
 `;
+
+export const StyledAvatarOne = styled.div`
+
+width:20%;
+opacity:15%;
+`;
+
+export const StyledAvatarTwo = styled.div`
+
+width:20%;
+opacity:15%;
+
+`
