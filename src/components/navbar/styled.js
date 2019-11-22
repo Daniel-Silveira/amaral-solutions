@@ -41,7 +41,7 @@ export const StyledLogo = styled.div`
 `;
 export const Mobile = styled.div`
   order: 3;
-  width: 10%;
+  width: 18%;
   @media (min-width: 768px) {
     display: none;
   }
