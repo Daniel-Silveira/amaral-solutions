@@ -17,7 +17,7 @@ const Header = () => {
           </Link>
         </StyledText>
         <StyledImage>
-          <img src={require("../../assets/img/header.png")} />
+          <img src={require("../../assets/img/header.svg")} />
         </StyledImage>
       </StyledHeader>
     </Element>
