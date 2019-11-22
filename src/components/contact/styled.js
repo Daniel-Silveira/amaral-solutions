@@ -33,5 +33,27 @@ export const StyledGroup = styled.div`
 export const GroupButton = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  @media(max-width: 768px) {
+      flex-direction: column;
+    }
+  button {
+    padding: 1%;
+    @media(max-width: 768px) {
+      margin-top: 1em;
+    }
+  }
+  p {
+    font-weight: 100;
+    letter-spacing: 3px;
+    
+  }
+`;
+
+
+export const StyledMessage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

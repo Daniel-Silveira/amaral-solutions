@@ -18,10 +18,10 @@ export const sendEmail = (data, setSend) => {
   })
     .then(res => {
       console.log(res);
-      return setSend('Enviado com sucesso');
+      return setSend('send');
     })
     .catch(err => {
       console.log(err);
-      return setSend('Não enviado');
+      return setSend('error');
     });
 };
