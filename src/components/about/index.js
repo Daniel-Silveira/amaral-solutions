@@ -10,7 +10,7 @@ const About = () => {
 
       <StyledAbout>
         <StyledImage>
-          <img src={require("../../assets/img/sobre.png")} />
+          <img src={require("../../assets/img/sobre.svg")} />
         </StyledImage>
         <StyledText>
           <DefaultText

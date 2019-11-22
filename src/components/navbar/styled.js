@@ -36,7 +36,7 @@ export const StyledLogo = styled.div`
       @media (max-width: 768px) {
         width: 23%;
       }
-      width: 7%;
+      width: 5%;
     `}
 `;
 export const Mobile = styled.div`
