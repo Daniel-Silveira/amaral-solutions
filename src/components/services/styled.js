@@ -20,10 +20,6 @@ export const StyledBox = styled.div`
   height: 40vh;
   text-align: center;
   width: 25%;
-  @media (max-width: 768px) {
-    width: 80%;
-    margin-bottom: 15%;
-  }
   p {
     height: 4em;
     width: 85%;
@@ -31,6 +27,13 @@ export const StyledBox = styled.div`
   h4 {
     letter-spacing: 5px;
     font-size: 1.2em;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 15%;
+    p {
+      height: inherit;
+    }
   }
 `;
 
