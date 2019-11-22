@@ -52,11 +52,11 @@ const Contact = () => {
             />
             <Input
               placeholder={error ? "Campo de E-mail obrigatório" : "E-mail *"}
-              keyboardType={"text"}
+              keyboardType={"email"}
               value={info.email}
               onChange={e => setInfo({ ...info, email: e.target.value })}
               error={error && !info.email}
-              type='email'
+              type='text'
             />
             <StyledGroup>
               <Input
