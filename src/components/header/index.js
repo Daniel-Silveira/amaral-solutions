@@ -1,20 +1,31 @@
 import React from "react";
-import { StyledHeader, StyledImage, StyledText, StyledButton } from "./styled";
+import { StyledHeader, StyledImage, StyledText, StyledButton, StyledAnimation, StyledDrone } from "./styled";
 import DefaultText from "../shared/text";
 import { Element, Link } from "react-scroll";
-import { StyledAvatarTwo } from "../about/styled";
+import Lottie from "react-lottie";
+import teste from './lf30_editor_MBhtaj.json'
+import drone from './drone.json'
 
 const Header = () => {
+  const defaultOptions = name => ({
+    loop: true,
+    autoplay: true, 
+    animationData: name
+  })
   return (
-    <Element name="Home">
+    <Element name="Inicio">
       <StyledHeader>
         <StyledText>
-        <StyledAvatarTwo>
-          <img src={require("../../assets/img/android2.svg")} />
-        </StyledAvatarTwo>
           <DefaultText
-            text='“A Tecnologia Possibilita Que As Pessoas Tenham Controle Sobre Tudo, Exeto Sobre a Tecnologia ."'
+            text='Criamos seu site ou aplicativo do jeito que sua empresa precisa e com as melhores tecnologia do mercado para que sua empresa cresça cada vez mais.'
             type="title"
+            color="#fff"
+          />
+          <DefaultText
+            text='E o melhor de tudo isso é que garatimos o melhor preço do mercado.'
+            type="titleCard"
+            color="#f9b253"
+            style={{margin: '1em 0'}}
           />
           <Link
             style={{ zIndex: "999" }}
@@ -27,9 +38,12 @@ const Header = () => {
             <StyledButton text="Fazer orçamento" />
           </Link>
         </StyledText>
-        <StyledImage>
-          <img src={require("../../assets/img/header.svg")} />
-        </StyledImage>
+        <StyledAnimation>
+          <Lottie options={defaultOptions(teste)}/>
+        </StyledAnimation>
+        <StyledDrone>
+        <Lottie options={defaultOptions(drone)}/>
+        </StyledDrone>
       </StyledHeader>
     </Element>
   );

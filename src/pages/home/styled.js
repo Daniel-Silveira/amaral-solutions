@@ -9,8 +9,6 @@ export const StyledHome = styled.div`
   h5,
   h6,
   p {
-    color: #00ffd1;
-    font-family: "Baloo Bhai", cursive;
     margin: 0;
   }
 `;

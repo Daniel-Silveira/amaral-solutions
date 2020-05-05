@@ -5,8 +5,8 @@ export const StyledNotifications = styled.div`
   background: #000;
   width: 20%;
   border-radius: 15px;
-  border: 2px solid #00ffd1;
-  color: #00ffd1;
+  border: 2px solid #f9b253;
+  color: #f9b253;
   bottom: 0;
   left: 0;
   margin: 0 3%;

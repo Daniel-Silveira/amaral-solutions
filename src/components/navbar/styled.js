@@ -10,7 +10,6 @@ export const StyledNavbar = styled.div`
   position: fixed;
   z-index: 9999;
   transition: 1s;
-  background: rgba(0, 0, 0, 0.5);
   height: 10vh;
   @media (max-width: 768px) {
     padding: 4%;
@@ -24,7 +23,7 @@ export const StyledNavbar = styled.div`
     `}
 `;
 export const StyledLogo = styled.div`
-  width: 10%;
+  width: 13%;
   transition: 1s;
   @media (max-width: 768px) {
     order: 2;
@@ -94,7 +93,7 @@ export const Toogle = styled.div`
 `;
 
 export const StyledGroup = styled.div`
-  border-top: 2px solid #00ffd1;
+  border-top: 2px solid #f9b253;
   width: 100%;
   text-align: center;
   padding-top: 3%;

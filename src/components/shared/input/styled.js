@@ -2,18 +2,18 @@ import styled, {css} from "styled-components";
 
 export const StyledInput = styled.input`
   outline: none;
-  border: 2px solid #00ffd1;
+  border: 2px solid #f9b253;
   border-radius: 8px;
   padding: 1.5%;
   box-sizing: border-box;
-  color: #00ffd1;
+  color: #f9b253;
   background: transparent;
   &::-webkit-outer-spin-button{
     appearance: none;
 
   }
   &::placeholder {
-    color: #00ffd1;
+    color: #f9b253;
     font-family: "Roboto", sans-serif;
   }
   ${({ error }) =>
@@ -28,16 +28,16 @@ export const StyledInput = styled.input`
 
 export const StyledArea = styled.textarea`
   outline: none;
-  border: 2px solid #00ffd1;
+  border: 2px solid #f9b253;
   border-radius: 10px;
   padding: 1.5%;
   box-sizing: border-box;
-  color: #00ffd1;
+  color: #f9b253;
   background: transparent;
   resize: none;
   height: 15vh;
   &::placeholder {
-    color: #00ffd1;
+    color: #f9b253;
     font-family: "Roboto", sans-serif;
   }
   ${({ error }) =>

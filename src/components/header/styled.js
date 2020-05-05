@@ -7,25 +7,18 @@ export const StyledHeader = styled.div`
   align-items: center;
   height: 100vh;
   @media (max-width: 768px) {
-    /* height: inherit; */
     flex-wrap: wrap;
     
   }
 `;
-export const StyledImage = styled.div`
-  opacity: 0.5;
-  width: 40%;
-  @media (max-width: 768px) {
-    order: -1;
-    width: 100%;
-  }
-`;
+
 export const StyledText = styled.div`
-  width: 40%;
-  padding-left: 3%;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  padding-left: 2.5%;
+  margin-top: 2%;
   @media (max-width: 768px) {
     width: 100%;
     text-align: center;
@@ -34,17 +27,58 @@ export const StyledText = styled.div`
     padding-top: 7%;
     position: absolute;
   }
-`;
+`
 
 export const StyledButton = styled(Button)`
-
  width: 15vw;
- height: 9vh;
+ height: 7vh;
+ color: #f9b253;
  @media (max-width: 768px) {
    width:65vw;   
  }
+`
 
-  
+export const StyledAnimation = styled.div`
+    position: absolute;
+    bottom: -1;
+    right: 0;
+    width: 64%;
 
+`
+
+export const StyledDrone = styled.div`
+    position: absolute;
+    animation: drone 30s infinite;
+    width: 30%;
+    @keyframes drone {
+      0% {
+        bottom: 0;
+        left: 0;
+      }
+      20% {
+        bottom: 5vh;
+        left: 20vw;
+      }
+      40% {
+        width: 10%;
+        left: 40vw;
+      }
+      50% {
+        bottom: 90vh;
+        left: 40vw;
+      }
+      60% {
+        width: 30%;
+      }
+      80% {
+        bottom: 5vh;
+        left: 90vw;
+      }
+      100% {
+        bottom: 0;
+        left: 0;
+      }
+    }
+    
 
 `

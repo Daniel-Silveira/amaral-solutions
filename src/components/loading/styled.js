@@ -12,7 +12,7 @@ export const StyledCircle = styled.div`
   right: 0px;
   position: absolute;
   border: solid 3px #222222;
-  border-top-color: #00ffd1;
+  border-top-color: #f9b253;
   border-radius: 50%;
 
   width: 100%;

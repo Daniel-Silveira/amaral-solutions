@@ -14,8 +14,8 @@ import { Link } from "react-scroll";
 import DefaultText from "../shared/text";
 import Overlay from "../overlay";
 const Navbar = ({ scroll }) => {
-  const data = ["Home", "Serviços", "Sobre", "Contato"];
-  const [selected, setSelected] = useState("Home");
+  const data = ["Inicio", "Serviços", "Sobre", "Contato"];
+  const [selected, setSelected] = useState("Inicio");
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,7 +28,7 @@ const Navbar = ({ scroll }) => {
         {data.map(i => (
           <Link activeClass='active' to={i} spy={true} smooth={true} duration={1000}>
             <DefaultText
-              color={selected === i ? null : "#fff"}
+              color={selected === i ? '#f9b253' : "#fff"}
               onClick={() => setSelected(i)}
               type='titleCard'
               text={i}
