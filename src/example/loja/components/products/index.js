@@ -13,7 +13,7 @@ const Products = ({ data, cart, setCart }) => {
             <img src={i.image} />
           </div>
           <h4> {i.name} </h4>
-          <h3> R${i.price} </h3>
+          <h3> R${i.price.toString().replace('.', ',')} </h3>
           <p> {i.description} </p>
           <button onClick={() => add(i)}>Adicionar ao Carrinho</button>
         </Product>

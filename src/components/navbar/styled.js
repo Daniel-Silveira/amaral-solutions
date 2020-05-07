@@ -27,7 +27,7 @@ export const StyledLogo = styled.div`
   transition: 1s;
   @media (max-width: 768px) {
     order: 2;
-    width: 35%;
+    width: 50%;
   }
   ${({ scroll }) =>
     scroll &&

@@ -38,8 +38,8 @@ const Services = ({ scroll }) => {
             <StyledImage>
               <img src={i.url} />
             </StyledImage>
-            <DefaultText type='titleCard' text={i.title} />
-            <DefaultText text={i.description} />
+            <DefaultText color="#fff" type='titleCard' text={i.title} />
+            <DefaultText color="#fff" text={i.description} />
           </StyledBox>
         ))}
       </StyledServices>

@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Title = styled.h1`
   font-size: 2.5em;
@@ -8,15 +8,15 @@ export const Title = styled.h1`
     css`
       color: ${color};
     `}
-    @media (max-width: 768px) {
-        font-size: 2.5em
+  @media (max-width: 768px) {
+    font-size: 1.5em;
   }
   ${({ center }) =>
     center &&
     css`
       text-align: center;
     `}
-`;
+`
 export const Subtitle = styled.h2`
   font-size: 1.8em;
   font-weight: 300;
@@ -25,33 +25,37 @@ export const Subtitle = styled.h2`
     css`
       color: ${color};
     `}
-    ${({ center }) =>
+  ${({ center }) =>
     center &&
     css`
       text-align: center;
     `}
-`;
+`
 export const TitleCard = styled.h4`
   font-size: 1.5em;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
   ${({ color }) =>
     color &&
     css`
       color: ${color};
     `}
     ${({ pointer }) =>
-    pointer &&
-    css`
-      cursor: pointer;
-    `}
+      pointer &&
+      css`
+        cursor: pointer;
+      `}
     ${({ center }) =>
-    center &&
-    css`
-      text-align: center;
-    `}
-`;
+      center &&
+      css`
+        text-align: center;
+      `}
+      
+`
 export const Default = styled.p`
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   ${({ color }) =>
     color &&
@@ -59,9 +63,9 @@ export const Default = styled.p`
       color: ${color};
     `}
 
-    ${( {button }) =>
-    button && 
+  ${({ button }) =>
+    button &&
     css`
-      font-size:1.5em;
+      font-size: 1.5em;
     `}
-`;
+`
