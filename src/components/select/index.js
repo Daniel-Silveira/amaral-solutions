@@ -7,7 +7,7 @@ const Select = ({ array, width, placeholder, selected, setSelected }) => {
   return (
     <SelectBox width={width}>
       <SelectHeader onClick={() => setActive(!active)}>
-        <p>{selected.name || placeholder}</p>
+        <p>{selected.role || placeholder}</p>
         <FiChevronDown />
       </SelectHeader>
       {active &&
@@ -15,7 +15,7 @@ const Select = ({ array, width, placeholder, selected, setSelected }) => {
         array.map(i => (
           <Option
             onClick={() => {
-              setSelected(i)
+              setSelected({...selected, role: i.name})
               setActive(false)
             }}
           >

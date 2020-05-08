@@ -11,8 +11,9 @@ const Stars = ({ amount }) => {
   }, [])
   return (
     <div>
-      {array.map(i => (
+      {array.map((i, index) => (
         <svg
+          key={index}
           style={{ margin: '0 1px' }}
           width="15"
           height="15"

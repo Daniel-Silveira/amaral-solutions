@@ -1,22 +1,39 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyledAdmin, Form, Input, Logo, Button } from './styled'
 import { useHistory } from 'react-router-dom'
+import { requestAccess } from '../../redux/user'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Login = () => {
   const history = useHistory()
+  const dispatch = useDispatch()
+  const { user } = useSelector(user => user)
   useEffect(() => {
     const token = localStorage.getItem('tokenAmaralSolutionsAdmin')
     token && history.push('/admin')
   }, [])
+  useEffect(() => {
+    !!user.value._id && history.push('/admin')
+  }, [user])
+  const [credentials, setCredentials] = useState({ email: '', password: '' })
   return (
     <StyledAdmin>
       <Logo>
         <img src={require('../../assets/img/logo.svg')} />
       </Logo>
       <Form>
-        <Input placeholder="E-mail" />
-        <Input placeholder="Senha" type="password" />
-        <Button>Entrar</Button>
+        <Input
+          value={credentials.email}
+          onChange={e => setCredentials({ ...credentials, email: e.target.value })}
+          placeholder="E-mail"
+        />
+        <Input
+          value={credentials.password}
+          onChange={e => setCredentials({ ...credentials, password: e.target.value })}
+          placeholder="Senha"
+          type="password"
+        />
+        <Button onClick={() => dispatch(requestAccess(credentials))}>Entrar</Button>
       </Form>
     </StyledAdmin>
   )
