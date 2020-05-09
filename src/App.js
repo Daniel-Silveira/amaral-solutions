@@ -8,7 +8,7 @@ import Professionals from './pages/professionals'
 import Admin from './pages/admin'
 import Login from './pages/admin/login'
 import store from './redux'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         <Route component={Home} exact path="/" />
         <Route component={Loja} path="/loja" />
         <Route component={Financiamento} path="/financiamento" />
-        <Route component={Professionals} path="/professionals" />
+        <Route component={Professionals} path="/professionals/:name" />
         <Route component={Admin} exact path="/admin" />
         <Route component={Login} path="/admin/login" />
       </Router>

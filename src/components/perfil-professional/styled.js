@@ -116,3 +116,15 @@ export const Skill = styled.div`
   padding: 0.5em;
   box-sizing: border-box;
 `
+
+export const Loading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  div {
+    width: 70%!important;
+    height: 70%!important;
+  }
+`
