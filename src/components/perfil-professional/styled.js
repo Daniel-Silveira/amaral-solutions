@@ -47,7 +47,8 @@ export const Perfil = styled.div`
   }
 `
 export const Photo = styled.div`
-  width: 8%;
+  width: 8em;
+  height: 8em;
   img {
     border-radius: 50%;
   }
@@ -124,7 +125,7 @@ export const Loading = styled.div`
   width: 100%;
   height: 100vh;
   div {
-    width: 70%!important;
-    height: 70%!important;
+    width: 70% !important;
+    height: 70% !important;
   }
 `

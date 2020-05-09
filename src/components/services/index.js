@@ -35,7 +35,7 @@ const Services = ({ scroll }) => {
       </div>
       <StyledServices>
         {data.map(i => (
-          <StyledBox>
+          <StyledBox key={i.title}>
             <StyledImage>
               <img src={i.url} />
             </StyledImage>

@@ -26,7 +26,7 @@ const Navbar = ({ scroll }) => {
       <Mobile />
       <StyledMenu>
         {data.map(i => (
-          <Link activeClass="active" to={i} spy={true} smooth={true} duration={1000}>
+          <Link key={i} activeClass="active" to={i} spy={true} smooth={true} duration={1000}>
             <DefaultText
               color={selected === i ? '#f9b253' : '#fff'}
               onClick={() => setSelected(i)}
@@ -49,15 +49,15 @@ const Navbar = ({ scroll }) => {
 
         <StyledGroup>
           {data.map(i => (
-            <Link activeClass="active" to={i} spy={true} smooth={true} duration={1000}>
+            <Link key={i} activeClass="active" to={i} spy={true} smooth={true} duration={1000}>
               <DefaultText
-                color={selected === i ? "#f9b253" : '#fff'}
+                color={selected === i ? '#f9b253' : '#fff'}
                 onClick={() => {
                   setOpen(false)
                   setSelected(i)
                 }}
                 type="titleCard"
-                style={{fontSize: '1.5em', margin: '1em 0'}}
+                style={{ fontSize: '1.5em', margin: '1em 0' }}
                 text={i}
                 pointer
               />

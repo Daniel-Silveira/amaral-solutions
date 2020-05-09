@@ -32,6 +32,7 @@ const Admin = () => {
     name: '',
     role: '',
     photo: '',
+    path: '',
     skills: [
       {
         type: 'Front-End',
@@ -63,11 +64,13 @@ const Admin = () => {
     dispatch(getPerfil(JSON.parse(userId)._id))
   }, [])
 
-  console.log(info)
-
   useEffect(() => {
     perfil && !!perfil.name && setInfo(perfil)
   }, [perfil])
+
+  useEffect(() => {
+    setInfo({ ...info, path: info.name.replace(' ', '-') })
+  }, [info.name])
 
   return (
     <StyledAdmin>
@@ -163,7 +166,6 @@ const Admin = () => {
         <BoxButton>
           <Button
             onClick={() => {
-              console.log(perfil)
               if (!!perfil && !!perfil.createdAt) {
                 dispatch(editPerfil(info))
               } else {

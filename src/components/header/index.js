@@ -24,12 +24,12 @@ const Header = () => {
       <StyledHeader>
         <StyledText>
           <DefaultText
-            text="Criamos seu site ou aplicativo do jeito que sua empresa precisa e com as melhores tecnologia do mercado para que sua empresa cresça cada vez mais."
+            text="Criamos seu site ou aplicativo do jeito que sua empresa precisa e com as melhores tecnologias do mercado para que sua empresa cresça cada vez mais."
             type="title"
             color="#fff"
           />
           <DefaultText
-            text="E o melhor de tudo isso é que garatimos o melhor preço do mercado."
+            text="E o melhor de tudo isso, é que garantimos o melhor preço do mercado."
             type="titleCard"
             color="#f9b253"
           />

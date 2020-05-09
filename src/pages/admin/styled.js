@@ -20,7 +20,6 @@ export const Logo = styled.div`
 
 export const Form = styled.div`
   width: 30vw;
-  height: 30vh;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -29,11 +28,12 @@ export const Form = styled.div`
   box-sizing: border-box;
   border: 2px solid #f9b253;
   align-items: center;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
   input {
     width: 90%;
+    margin: 1em 0;
   }
   ${({ big }) =>
     big &&
@@ -153,4 +153,10 @@ export const BoxButton = styled.div`
       color: #000;
     }
   }
+`
+
+export const Register = styled.p`
+  cursor: pointer;
+  color: #fff;
+  margin: 1em 0;
 `
