@@ -28,9 +28,6 @@ export const StyledText = styled.div`
     position: absolute;
     padding: 0;
   }
-  @media (height: 812px) {
-    margin-top: 20vh;
-  }
   h1 {
     @media (max-height: 660px) {
       font-size: 1.3em;
@@ -39,6 +36,12 @@ export const StyledText = styled.div`
   h4 {
     margin: 1em 0;
     @media (max-width: 768px) {
+      margin: 1em 0;
+    }
+  }
+  @media (height: 812px) {
+    margin-top: 20vh;
+    h4 {
       margin: 2em 0;
     }
   }
@@ -68,6 +71,7 @@ export const StyledAnimation = styled.div`
   }
   @media (max-width: 768px) {
     width: 100%;
+    margin-bottom: -3vh;
   }
 `
 

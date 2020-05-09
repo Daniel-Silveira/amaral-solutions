@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ListProfessionals, BoxProfessional, Photo, StyledButton } from './styled'
+import { ListProfessionals, BoxProfessional, Photo, StyledButton, StyledLink } from './styled'
 import DefaultText from '../shared/text'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, Link } from 'react-router-dom'
@@ -32,9 +32,9 @@ const Professionals = ({ children }) => {
             </Photo>
             <h4>{i.name}</h4>
             <p>{i.role}</p>
-            <Link to={`/professionals/${i.path}`} target="_blank">
+            <StyledLink to={`/professionals/${i.path}`} target="_blank">
               <StyledButton text="Ver perfil" />
-            </Link>
+            </StyledLink>
           </BoxProfessional>
         ))}
       </ListProfessionals>

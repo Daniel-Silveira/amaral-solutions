@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 import Button from '../shared/button'
+import { Link } from 'react-router-dom'
 
 export const ListProfessionals = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 `
 
 export const BoxProfessional = styled.div`
@@ -15,6 +21,13 @@ export const BoxProfessional = styled.div`
   align-items: center;
   margin: 1em;
   border-radius: 10px;
+  @media(max-width: 768px) {
+    border-radius: 10px;
+    width: 42%;
+    box-sizing: border-box;
+    margin: 2em 0;
+    justify-content: space-between;
+  }
   h4 {
     margin: 1em 0 0.4em;
     text-transform: capitalize;
@@ -35,6 +48,9 @@ export const Photo = styled.div`
     border-radius: 50%;
   }
 `
+export const StyledLink = styled(Link)`
+  width: 100%;
+`
 
 export const StyledButton = styled(Button)`
   padding: 0.4em 1.5em;
@@ -44,5 +60,9 @@ export const StyledButton = styled(Button)`
   p {
     margin: 0;
     font-weight: initial;
+  }
+  @media (max-width: 768px) {
+    padding: 5px;
+    width: 100%;
   }
 `

@@ -41,6 +41,14 @@ export const StyledText = styled.div`
   }
 `
 
+export const TitleEquip = styled(DefaultText)`
+  margin: 1em 0 -3vh;
+  @media (max-width: 768px) {
+    margin: 5vh 0 1vh!important;
+    font-size: 1.3em;
+  }
+`
+
 export const StyledTitle = styled(DefaultText)`
   padding: 3% 0;
   letter-spacing: 4px;
