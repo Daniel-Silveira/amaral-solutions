@@ -1,3 +1,3 @@
-const api = 'http://localhost:3002'
+const api = 'https://api-amaral-solutions.herokuapp.com'
 
 export default api

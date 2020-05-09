@@ -45,15 +45,15 @@ export const StyledText = styled.div`
 `
 
 export const StyledButton = styled(Button)`
-  width: 15vw;
-  height: 7vh;
+  padding: 1em 3em;
+  font-size: 1em;
   color: #f9b253;
   @media (width: 1024px) {
     width: 20vw;
   }
   @media (max-width: 768px) {
     width: 58vw;
-    height: 6vh;
+    padding: 1em;
   }
 `
 
@@ -67,7 +67,7 @@ export const StyledAnimation = styled.div`
     width: 70%;
   }
   @media (max-width: 768px) {
-    width: 111%;
+    width: 100%;
   }
 `
 

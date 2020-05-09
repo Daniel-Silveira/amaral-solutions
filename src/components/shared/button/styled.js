@@ -1,21 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledButton = styled.button`
   border: 2px solid #f9b253;
   border-radius: 40px;
   background: transparent;
   outline: none;
-  padding: 3%;
   box-sizing: border-box;
   cursor: pointer;
-  width: 14vw;
+  padding: 1em;
+  p {
+    font-weight: 400;
+    font-size: 1em;
+  }
+
   &:hover {
     background: #f9b253;
     p {
-        color: #000;
+      color: #000;
     }
   }
   @media (max-width: 768px) {
     width: 50%;
   }
-`;
+`

@@ -16,7 +16,7 @@ import Stars from './stars'
 
 const PerfilProfessional = ({ professional }) => (
   <StyledProfessional>
-    <Background/>
+    <Background />
     <Logo>
       <img src={require('../../assets/img/logo.svg')} />
     </Logo>
@@ -36,12 +36,16 @@ const PerfilProfessional = ({ professional }) => (
             <Header>
               <p>{i.type}</p>
             </Header>
-            {i.skill.map(item => (
-              <Skill>
-                <p>{item.name}</p>
-                <Stars amount={item.nivel} />
-              </Skill>
-            ))}
+            {i.skill.map(
+              item =>
+                item.name &&
+                item.nivel && (
+                  <Skill>
+                    <p>{item.name}</p>
+                    <Stars amount={item.nivel} />
+                  </Skill>
+                )
+            )}
           </Box>
         ))}
       </Wrapper>

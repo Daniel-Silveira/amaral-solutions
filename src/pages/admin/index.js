@@ -35,7 +35,7 @@ const Admin = () => {
     skills: [
       {
         type: 'Front-End',
-        skill: [],
+        skill: [false],
       },
       {
         type: 'Back-End',

@@ -55,7 +55,6 @@ export const TitleCard = styled.h4`
       
 `
 export const Default = styled.p`
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   ${({ color }) =>
     color &&
