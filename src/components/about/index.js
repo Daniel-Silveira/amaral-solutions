@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledAbout, StyledImage, StyledText, StyledTitle, StyledAvatarOne, TitleEquip } from './styled'
+import { StyledAbout, StyledImage, StyledText, StyledTitle, TitleEquip } from './styled'
 import DefaultText from '../shared/text'
 import { Element } from 'react-scroll'
 import Professionals from '../professionals'

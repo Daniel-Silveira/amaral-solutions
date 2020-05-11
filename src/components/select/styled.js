@@ -4,12 +4,15 @@ export const SelectBox = styled.div`
   border: 1px solid #f9b253;
   border-radius: 10px;
   color: #f9b253;
-  font-size: .9em;
+  font-size: 0.9em;
   ${({ width }) =>
     width &&
     css`
       width: ${width};
     `}
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const SelectHeader = styled.div`

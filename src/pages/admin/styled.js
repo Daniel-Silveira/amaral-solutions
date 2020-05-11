@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Select from '../../components/select'
 
 export const StyledAdmin = styled.div`
   background-color: #000;
@@ -9,6 +10,10 @@ export const StyledAdmin = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  @media (max-width: 768px) {
+    overflow: auto;
+    height: initial;
+  }
 `
 
 export const Logo = styled.div`
@@ -43,6 +48,9 @@ export const Form = styled.div`
       justify-content: space-around;
       align-items: initial;
     `}
+  @media(max-width: 768px) {
+    height: initial;
+  }
 `
 
 export const Line = styled.div`
@@ -98,6 +106,7 @@ export const Header = styled.div`
 export const Skills = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `
 
 export const AddBox = styled.div`
@@ -127,6 +136,12 @@ export const Container = styled.div`
     color: #fff;
     font-size: 1em;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    h2 {
+      margin: 2em 0 0;
+    }
+  }
 `
 
 export const Skill = styled.div`
@@ -152,6 +167,9 @@ export const BoxButton = styled.div`
     :hover {
       color: #000;
     }
+  }
+  @media (max-width: 768px) {
+    margin: 1em 0;
   }
 `
 

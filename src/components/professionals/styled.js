@@ -21,18 +21,20 @@ export const BoxProfessional = styled.div`
   align-items: center;
   margin: 1em;
   border-radius: 10px;
-  @media(max-width: 768px) {
+  width: 20%;
+  justify-content: space-between;
+  @media (max-width: 768px) {
     border-radius: 10px;
     width: 42%;
     box-sizing: border-box;
     margin: 2em 0;
-    justify-content: space-between;
   }
   h4 {
     margin: 1em 0 0.4em;
     text-transform: capitalize;
     color: #f9b253;
     font-weight: 400;
+    text-align: center;
   }
   p {
     margin-bottom: 1em;
@@ -49,7 +51,9 @@ export const Photo = styled.div`
   }
 `
 export const StyledLink = styled(Link)`
-  width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const StyledButton = styled(Button)`
