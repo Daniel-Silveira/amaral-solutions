@@ -10,10 +10,15 @@ export const StyledAdmin = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  @media (max-width: 768px) {
-    overflow: auto;
-    height: initial;
-  }
+  ${({ user }) =>
+    user &&
+    css`
+      @media (max-width: 768px) {
+        overflow: auto;
+        height: initial;
+        padding: 1em 0;
+      }
+    `}
 `
 
 export const Logo = styled.div`

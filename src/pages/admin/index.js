@@ -51,6 +51,7 @@ const Admin = () => {
   const dispatch = useDispatch()
   const [skill, setSkill] = useState({ name: '', nivel: '' })
   const [remove, setRemove] = useState(false)
+  const [att, setAtt] = useState(false)
   const {
     perfil: { perfil },
   } = useSelector(value => value)
@@ -66,6 +67,7 @@ const Admin = () => {
 
   useEffect(() => {
     perfil && !!perfil.name && setInfo(perfil)
+    att && history.push(`/professionals/${perfil.path}`)
   }, [perfil])
 
   useEffect(() => {
@@ -73,7 +75,7 @@ const Admin = () => {
   }, [info.name])
 
   return (
-    <StyledAdmin>
+    <StyledAdmin user>
       <Form big>
         <div>
           <Header>
@@ -163,9 +165,11 @@ const Admin = () => {
             </Container>
           ))}
         </Skills>
+        {att && <p style={{ color: '#fff', textAlign: "center" }}>Carregando...</p>}
         <BoxButton>
           <Button
             onClick={() => {
+              setAtt(true)
               if (!!perfil && !!perfil.createdAt) {
                 dispatch(editPerfil(info))
               } else {
