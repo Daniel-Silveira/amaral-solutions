@@ -1,3 +1,3 @@
-const api = 'https://api-amaral-solutions.herokuapp.com'
+const api = 'https://api-teste-amaral.herokuapp.com'
 
 export default api

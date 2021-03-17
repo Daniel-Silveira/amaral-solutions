@@ -75,7 +75,7 @@ const Contact = () => {
                 <DefaultText color="#fff" text="atendimento@amaralsolutions.com.br" />
               </div>
               <StyledWhats
-                href="https://wa.me/5511959247678?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20seus%20servi%C3%A7os"
+                href="https://wa.me/5511983564980?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20seus%20servi%C3%A7os"
                 target="_blank"
               >
                 <FaWhatsapp color="#fff" size="1.5em" />
