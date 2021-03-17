@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { ListProfessionals, BoxProfessional, Photo, StyledButton, StyledLink } from './styled'
-import DefaultText from '../shared/text'
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory, Link } from 'react-router-dom'
 import { listPerfil } from '../../redux/perfil'
 
 const Professionals = ({ children }) => {
   const [array, setArray] = useState([])
-  const history = useHistory()
   const dispatch = useDispatch()
   const {
     perfil: { list },
@@ -16,6 +13,8 @@ const Professionals = ({ children }) => {
   useEffect(() => {
     dispatch(listPerfil())
   }, [])
+
+  console.log(list, ' fadfasdfasdf')
 
   useEffect(() => {
     setArray(list)

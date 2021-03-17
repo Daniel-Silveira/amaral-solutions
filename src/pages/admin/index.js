@@ -26,8 +26,6 @@ const Admin = () => {
   const history = useHistory()
   const types = [{ name: 'Front-End' }, { name: 'Back-End' }, { name: 'Full-Stack' }]
 
-  const userId = localStorage.getItem('userAmaralSolutionsAdmin')
-
   const [info, setInfo] = useState({
     name: '',
     role: '',
@@ -53,20 +51,19 @@ const Admin = () => {
   const [remove, setRemove] = useState(false)
   const [att, setAtt] = useState(false)
   const {
+    user: { user },
     perfil: { perfil },
   } = useSelector(value => value)
 
   useEffect(() => {
-    const token = localStorage.getItem('tokenAmaralSolutionsAdmin')
-    !token && history.push('/admin/login')
+    if (user?._id) {
+      return dispatch(getPerfil(user._id))
+    }
+    return history.push('/admin/login')
   }, [])
 
   useEffect(() => {
-    dispatch(getPerfil(JSON.parse(userId)._id))
-  }, [])
-
-  useEffect(() => {
-    perfil && !!perfil.name && setInfo(perfil)
+    !!perfil?.name && setInfo(perfil)
     att && history.push(`/professionals/${perfil.path}`)
   }, [perfil])
 
@@ -165,7 +162,7 @@ const Admin = () => {
             </Container>
           ))}
         </Skills>
-        {att && <p style={{ color: '#fff', textAlign: "center" }}>Carregando...</p>}
+        {att && <p style={{ color: '#fff', textAlign: 'center' }}>Carregando...</p>}
         <BoxButton>
           <Button
             onClick={() => {
@@ -173,7 +170,7 @@ const Admin = () => {
               if (!!perfil && !!perfil.createdAt) {
                 dispatch(editPerfil(info))
               } else {
-                dispatch(requestPerfil({ ...info, owner: JSON.parse(userId)._id }))
+                dispatch(requestPerfil({ ...info, owner: user._id }))
               }
             }}
           >

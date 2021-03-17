@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { StyledAdmin, Form, Input, Logo, Button, Register } from './styled'
 import { useHistory } from 'react-router-dom'
-import { requestAccess, requestRegister } from '../../redux/user'
+import { requestAccess, requestAccessSuccess, requestRegister } from '../../redux/user'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Login = () => {
   const history = useHistory()
   const dispatch = useDispatch()
-  const { user } = useSelector(user => user)
+  const {
+    user: { user },
+  } = useSelector(value => value)
   const [register, setRegister] = useState(false)
+  const [credentials, setCredentials] = useState({ email: '', password: '', code: '' })
+
   useEffect(() => {
     const token = localStorage.getItem('tokenAmaralSolutionsAdmin')
+    const userStorage = localStorage.getItem('userAmaralSolutionsAdmin')
+    dispatch(requestAccessSuccess({user: JSON.parse(userStorage)}))
     token && history.push('/admin')
   }, [])
+
   useEffect(() => {
-    !!user.value._id && history.push('/admin')
+    !!user?._id && history.push('/admin')
   }, [user])
-  const [credentials, setCredentials] = useState({ email: '', password: '', code: '' })
+
   return (
     <StyledAdmin>
       <Logo>
@@ -41,8 +48,16 @@ const Login = () => {
             placeholder="Codigo de convite"
           />
         )}
-        <Button onClick={() => register ? dispatch(requestRegister(credentials)) : dispatch(requestAccess(credentials))}>{register ? 'Cadastrar' : 'Entrar'}</Button>
-        <Register onClick={() => setRegister(!register)}>{register ? 'Voltar' : 'Criar conta'}</Register>
+        <Button
+          onClick={() =>
+            register ? dispatch(requestRegister(credentials)) : dispatch(requestAccess(credentials))
+          }
+        >
+          {register ? 'Cadastrar' : 'Entrar'}
+        </Button>
+        <Register onClick={() => setRegister(!register)}>
+          {register ? 'Voltar' : 'Criar conta'}
+        </Register>
       </Form>
     </StyledAdmin>
   )

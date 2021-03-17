@@ -13,11 +13,12 @@ import {
 import { Link } from 'react-scroll'
 import DefaultText from '../shared/text'
 import Overlay from '../overlay'
+
 const Navbar = ({ scroll }) => {
   const data = ['Inicio', 'Serviços', 'Sobre', 'Contato']
   const [selected, setSelected] = useState('Inicio')
   const [open, setOpen] = useState(false)
-  console.log(scroll)
+
   return (
     <StyledNavbar scroll={!open && scroll > 180}>
       <StyledLogo scroll={!open && scroll > 180}>

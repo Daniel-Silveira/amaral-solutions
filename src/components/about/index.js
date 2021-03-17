@@ -31,14 +31,9 @@ const About = () => {
 Para isso contamos com uma equipe especializada no que faz e muito dedicada para sempre dar o seu melhor resultado."
             />
           </div>
-          {/* <Professionals>
-            <TitleEquip
-              color="#f9b253"
-              type="titleCard"
-              text="Nossa equipe"
-              center
-            />
-          </Professionals> */}
+          <Professionals>
+            <TitleEquip color="#f9b253" type="titleCard" text="Nossa equipe" center />
+          </Professionals>
         </StyledText>
       </StyledAbout>
     </Element>
